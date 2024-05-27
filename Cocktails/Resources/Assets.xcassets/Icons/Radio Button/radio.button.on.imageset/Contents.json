@@ -1,6 +1,7 @@
 {
-  "colors" : [
+  "images" : [
     {
+      "filename" : "radio_button_selected.pdf",
       "idiom" : "universal"
     }
   ],

@@ -8,12 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		006CBF112BFFB7200019D470 /* CocktailsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CBF102BFFB7200019D470 /* CocktailsApp.swift */; };
-		006CBF132BFFB7200019D470 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CBF122BFFB7200019D470 /* ContentView.swift */; };
 		006CBF152BFFB7210019D470 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 006CBF142BFFB7210019D470 /* Assets.xcassets */; };
 		006CBF182BFFB7210019D470 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 006CBF172BFFB7210019D470 /* Preview Assets.xcassets */; };
 		006CBF222BFFB7210019D470 /* CocktailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CBF212BFFB7210019D470 /* CocktailsTests.swift */; };
 		006CBF2C2BFFB7210019D470 /* CocktailsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CBF2B2BFFB7210019D470 /* CocktailsUITests.swift */; };
 		006CBF2E2BFFB7210019D470 /* CocktailsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CBF2D2BFFB7210019D470 /* CocktailsUITestsLaunchTests.swift */; };
+		0071CEF52C033825003F7340 /* Muli-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0071CEEB2C033825003F7340 /* Muli-Light.ttf */; };
+		0071CEF62C033825003F7340 /* Muli-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0071CEEC2C033825003F7340 /* Muli-BoldItalic.ttf */; };
+		0071CEF72C033825003F7340 /* Muli-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0071CEED2C033825003F7340 /* Muli-SemiBold.ttf */; };
+		0071CEF82C033825003F7340 /* Muli-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0071CEEE2C033825003F7340 /* Muli-LightItalic.ttf */; };
+		0071CEF92C033825003F7340 /* Muli.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0071CEEF2C033825003F7340 /* Muli.ttf */; };
+		0071CEFA2C033825003F7340 /* Muli-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0071CEF02C033825003F7340 /* Muli-ExtraLightItalic.ttf */; };
+		0071CEFB2C033825003F7340 /* Muli-Semi-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0071CEF12C033825003F7340 /* Muli-Semi-BoldItalic.ttf */; };
+		0071CEFC2C033825003F7340 /* Muli-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0071CEF22C033825003F7340 /* Muli-Italic.ttf */; };
+		0071CEFD2C033825003F7340 /* Muli-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0071CEF32C033825003F7340 /* Muli-Bold.ttf */; };
+		0071CEFE2C033825003F7340 /* Muli-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0071CEF42C033825003F7340 /* Muli-ExtraLight.ttf */; };
+		0071CF042C033918003F7340 /* FontsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0071CF032C033918003F7340 /* FontsExtension.swift */; };
+		0071CF092C038C11003F7340 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0071CF082C038C11003F7340 /* HomeView.swift */; };
+		0071CF0C2C038D8C003F7340 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0071CF0B2C038D8C003F7340 /* HomeViewModel.swift */; };
+		0071CF122C038F41003F7340 /* CocktailListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0071CF112C038F41003F7340 /* CocktailListView.swift */; };
+		0071CF152C038F8E003F7340 /* CCSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0071CF142C038F8E003F7340 /* CCSearchBar.swift */; };
+		0071CF182C039308003F7340 /* RoundedButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0071CF172C039308003F7340 /* RoundedButtonStyle.swift */; };
+		0071CF1B2C0399A7003F7340 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0071CF1A2C0399A7003F7340 /* LoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +52,6 @@
 /* Begin PBXFileReference section */
 		006CBF0D2BFFB7200019D470 /* Cocktails.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cocktails.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		006CBF102BFFB7200019D470 /* CocktailsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailsApp.swift; sourceTree = "<group>"; };
-		006CBF122BFFB7200019D470 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		006CBF142BFFB7210019D470 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		006CBF172BFFB7210019D470 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		006CBF1D2BFFB7210019D470 /* CocktailsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CocktailsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +59,24 @@
 		006CBF272BFFB7210019D470 /* CocktailsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CocktailsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		006CBF2B2BFFB7210019D470 /* CocktailsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailsUITests.swift; sourceTree = "<group>"; };
 		006CBF2D2BFFB7210019D470 /* CocktailsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0071CEEB2C033825003F7340 /* Muli-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-Light.ttf"; sourceTree = "<group>"; };
+		0071CEEC2C033825003F7340 /* Muli-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-BoldItalic.ttf"; sourceTree = "<group>"; };
+		0071CEED2C033825003F7340 /* Muli-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-SemiBold.ttf"; sourceTree = "<group>"; };
+		0071CEEE2C033825003F7340 /* Muli-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-LightItalic.ttf"; sourceTree = "<group>"; };
+		0071CEEF2C033825003F7340 /* Muli.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Muli.ttf; sourceTree = "<group>"; };
+		0071CEF02C033825003F7340 /* Muli-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		0071CEF12C033825003F7340 /* Muli-Semi-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-Semi-BoldItalic.ttf"; sourceTree = "<group>"; };
+		0071CEF22C033825003F7340 /* Muli-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-Italic.ttf"; sourceTree = "<group>"; };
+		0071CEF32C033825003F7340 /* Muli-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-Bold.ttf"; sourceTree = "<group>"; };
+		0071CEF42C033825003F7340 /* Muli-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-ExtraLight.ttf"; sourceTree = "<group>"; };
+		0071CEFF2C033836003F7340 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0071CF032C033918003F7340 /* FontsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontsExtension.swift; sourceTree = "<group>"; };
+		0071CF082C038C11003F7340 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		0071CF0B2C038D8C003F7340 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		0071CF112C038F41003F7340 /* CocktailListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailListView.swift; sourceTree = "<group>"; };
+		0071CF142C038F8E003F7340 /* CCSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCSearchBar.swift; sourceTree = "<group>"; };
+		0071CF172C039308003F7340 /* RoundedButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButtonStyle.swift; sourceTree = "<group>"; };
+		0071CF1A2C0399A7003F7340 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,9 +127,11 @@
 		006CBF0F2BFFB7200019D470 /* Cocktails */ = {
 			isa = PBXGroup;
 			children = (
-				006CBF102BFFB7200019D470 /* CocktailsApp.swift */,
-				006CBF122BFFB7200019D470 /* ContentView.swift */,
-				006CBF142BFFB7210019D470 /* Assets.xcassets */,
+				0071CF052C038BE8003F7340 /* Application */,
+				0071CF002C0338FB003F7340 /* Extensions */,
+				0071CF062C038BFF003F7340 /* Flows */,
+				0071CEE92C033809003F7340 /* Resources */,
+				0071CF162C0392F8003F7340 /* Styles */,
 				006CBF162BFFB7210019D470 /* Preview Content */,
 			);
 			path = Cocktails;
@@ -125,6 +160,109 @@
 				006CBF2D2BFFB7210019D470 /* CocktailsUITestsLaunchTests.swift */,
 			);
 			path = CocktailsUITests;
+			sourceTree = "<group>";
+		};
+		0071CEE92C033809003F7340 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				006CBF142BFFB7210019D470 /* Assets.xcassets */,
+				0071CEEA2C033810003F7340 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0071CEEA2C033810003F7340 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				0071CEF32C033825003F7340 /* Muli-Bold.ttf */,
+				0071CEEC2C033825003F7340 /* Muli-BoldItalic.ttf */,
+				0071CEF42C033825003F7340 /* Muli-ExtraLight.ttf */,
+				0071CEF02C033825003F7340 /* Muli-ExtraLightItalic.ttf */,
+				0071CEF22C033825003F7340 /* Muli-Italic.ttf */,
+				0071CEEB2C033825003F7340 /* Muli-Light.ttf */,
+				0071CEEE2C033825003F7340 /* Muli-LightItalic.ttf */,
+				0071CEF12C033825003F7340 /* Muli-Semi-BoldItalic.ttf */,
+				0071CEED2C033825003F7340 /* Muli-SemiBold.ttf */,
+				0071CEEF2C033825003F7340 /* Muli.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		0071CF002C0338FB003F7340 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0071CF012C033901003F7340 /* SwiftUI */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0071CF012C033901003F7340 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				0071CF032C033918003F7340 /* FontsExtension.swift */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		0071CF052C038BE8003F7340 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				006CBF102BFFB7200019D470 /* CocktailsApp.swift */,
+				0071CEFF2C033836003F7340 /* Info.plist */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		0071CF062C038BFF003F7340 /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				0071CF192C03999A003F7340 /* Loading */,
+				0071CF072C038C07003F7340 /* Home */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		0071CF072C038C07003F7340 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				0071CF132C038F7D003F7340 /* UI Components */,
+				0071CF102C038F2E003F7340 /* List Elements */,
+				0071CF082C038C11003F7340 /* HomeView.swift */,
+				0071CF0B2C038D8C003F7340 /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		0071CF102C038F2E003F7340 /* List Elements */ = {
+			isa = PBXGroup;
+			children = (
+				0071CF112C038F41003F7340 /* CocktailListView.swift */,
+			);
+			path = "List Elements";
+			sourceTree = "<group>";
+		};
+		0071CF132C038F7D003F7340 /* UI Components */ = {
+			isa = PBXGroup;
+			children = (
+				0071CF142C038F8E003F7340 /* CCSearchBar.swift */,
+			);
+			path = "UI Components";
+			sourceTree = "<group>";
+		};
+		0071CF162C0392F8003F7340 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				0071CF172C039308003F7340 /* RoundedButtonStyle.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		0071CF192C03999A003F7340 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				0071CF1A2C0399A7003F7340 /* LoadingView.swift */,
+			);
+			path = Loading;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,7 +370,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				006CBF182BFFB7210019D470 /* Preview Assets.xcassets in Resources */,
+				0071CEF52C033825003F7340 /* Muli-Light.ttf in Resources */,
+				0071CEF92C033825003F7340 /* Muli.ttf in Resources */,
+				0071CEFB2C033825003F7340 /* Muli-Semi-BoldItalic.ttf in Resources */,
+				0071CEFA2C033825003F7340 /* Muli-ExtraLightItalic.ttf in Resources */,
+				0071CEF82C033825003F7340 /* Muli-LightItalic.ttf in Resources */,
+				0071CEF62C033825003F7340 /* Muli-BoldItalic.ttf in Resources */,
+				0071CEFE2C033825003F7340 /* Muli-ExtraLight.ttf in Resources */,
+				0071CEFC2C033825003F7340 /* Muli-Italic.ttf in Resources */,
+				0071CEFD2C033825003F7340 /* Muli-Bold.ttf in Resources */,
 				006CBF152BFFB7210019D470 /* Assets.xcassets in Resources */,
+				0071CEF72C033825003F7340 /* Muli-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,7 +405,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				006CBF132BFFB7200019D470 /* ContentView.swift in Sources */,
+				0071CF042C033918003F7340 /* FontsExtension.swift in Sources */,
+				0071CF092C038C11003F7340 /* HomeView.swift in Sources */,
+				0071CF122C038F41003F7340 /* CocktailListView.swift in Sources */,
+				0071CF182C039308003F7340 /* RoundedButtonStyle.swift in Sources */,
+				0071CF152C038F8E003F7340 /* CCSearchBar.swift in Sources */,
+				0071CF1B2C0399A7003F7340 /* LoadingView.swift in Sources */,
+				0071CF0C2C038D8C003F7340 /* HomeViewModel.swift in Sources */,
 				006CBF112BFFB7200019D470 /* CocktailsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,11 +579,12 @@
 				DEVELOPMENT_TEAM = CGRRHKGZY4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Cocktails/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -454,11 +609,12 @@
 				DEVELOPMENT_TEAM = CGRRHKGZY4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Cocktails/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
