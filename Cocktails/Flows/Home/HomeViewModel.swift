@@ -5,7 +5,8 @@
 //  Created by Fabijan Mihanović on 26.05.2024..
 //
 
-import Foundation
+import SwiftUI
+import FlowStacks
 
 extension HomeView {
     
@@ -13,7 +14,7 @@ extension HomeView {
     class ViewModel {
 
         func openFilters() {
-            print("To filters")
+            
         }
 
     }

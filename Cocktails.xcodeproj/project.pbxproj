@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		004CE8612C04ACE40081E63C /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004CE8602C04ACE40081E63C /* MainCoordinator.swift */; };
+		004CE8642C04AF070081E63C /* FlowStacks in Frameworks */ = {isa = PBXBuildFile; productRef = 004CE8632C04AF070081E63C /* FlowStacks */; };
 		006CBF112BFFB7200019D470 /* CocktailsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CBF102BFFB7200019D470 /* CocktailsApp.swift */; };
 		006CBF152BFFB7210019D470 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 006CBF142BFFB7210019D470 /* Assets.xcassets */; };
 		006CBF182BFFB7210019D470 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 006CBF172BFFB7210019D470 /* Preview Assets.xcassets */; };
@@ -50,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		004CE8602C04ACE40081E63C /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		006CBF0D2BFFB7200019D470 /* Cocktails.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cocktails.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		006CBF102BFFB7200019D470 /* CocktailsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailsApp.swift; sourceTree = "<group>"; };
 		006CBF142BFFB7210019D470 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -84,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				004CE8642C04AF070081E63C /* FlowStacks in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +108,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		004CE85E2C04ACCE0081E63C /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				004CE8602C04ACE40081E63C /* MainCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
 		006CBF042BFFB71F0019D470 = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				0071CF052C038BE8003F7340 /* Application */,
+				004CE85E2C04ACCE0081E63C /* Coordinators */,
 				0071CF002C0338FB003F7340 /* Extensions */,
 				0071CF062C038BFF003F7340 /* Flows */,
 				0071CEE92C033809003F7340 /* Resources */,
@@ -281,6 +294,9 @@
 			dependencies = (
 			);
 			name = Cocktails;
+			packageProductDependencies = (
+				004CE8632C04AF070081E63C /* FlowStacks */,
+			);
 			productName = Cocktails;
 			productReference = 006CBF0D2BFFB7200019D470 /* Cocktails.app */;
 			productType = "com.apple.product-type.application";
@@ -353,6 +369,9 @@
 				Base,
 			);
 			mainGroup = 006CBF042BFFB71F0019D470;
+			packageReferences = (
+				004CE8622C04AF070081E63C /* XCRemoteSwiftPackageReference "FlowStacks" */,
+			);
 			productRefGroup = 006CBF0E2BFFB7200019D470 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -412,6 +431,7 @@
 				0071CF152C038F8E003F7340 /* CCSearchBar.swift in Sources */,
 				0071CF1B2C0399A7003F7340 /* LoadingView.swift in Sources */,
 				0071CF0C2C038D8C003F7340 /* HomeViewModel.swift in Sources */,
+				004CE8612C04ACE40081E63C /* MainCoordinator.swift in Sources */,
 				006CBF112BFFB7200019D470 /* CocktailsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -744,6 +764,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		004CE8622C04AF070081E63C /* XCRemoteSwiftPackageReference "FlowStacks" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/johnpatrickmorgan/FlowStacks";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		004CE8632C04AF070081E63C /* FlowStacks */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 004CE8622C04AF070081E63C /* XCRemoteSwiftPackageReference "FlowStacks" */;
+			productName = FlowStacks;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 006CBF052BFFB71F0019D470 /* Project object */;
 }

@@ -6,8 +6,11 @@
 //
 
 import SwiftUI
+import FlowStacks
 
 struct HomeView: View {
+
+    @EnvironmentObject var navigator: FlowNavigator<AppScreen>
 
     let viewModel = ViewModel()
 
@@ -17,7 +20,9 @@ struct HomeView: View {
                 .ignoresSafeArea(.container, edges: .top)
             VStack(spacing: 0) {
                 CCSearchBar(
-                    filtersTapped: viewModel.openFilters
+                    filtersTapped: {
+                        navigator.push(.filters)
+                    }
                 ).zIndex(1)
 
                 List(0..<12) { _ in
@@ -33,7 +38,7 @@ struct HomeView: View {
             }
             .overlay(alignment: .bottom) {
                 Button("FEELING LUCKY") {
-
+                    navigator.push(.details(id: 123))
                 }
                 .buttonStyle(
                     RoundedButtonStyle(
