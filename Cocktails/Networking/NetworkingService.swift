@@ -32,6 +32,7 @@ class NetworkingService: NetworkProtocol {
                     return APIError.unknownError
                 }
             }
+            .receive(on: DispatchQueue.main)
             .eraseToAnyPublisher()
     }
 

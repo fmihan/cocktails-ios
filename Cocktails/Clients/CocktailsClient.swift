@@ -14,7 +14,7 @@ protocol CocktailsClientProtocol {
 
 class CocktailsClient: CocktailsClientProtocol {
 
-    var network: NetworkProtocol
+    private var network: NetworkProtocol
 
     init(network: NetworkProtocol) {
         self.network = network

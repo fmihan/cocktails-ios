@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct CocktailListView: View {
+
+    let cocktail: Cocktail
+
     var body: some View {
         HStack(alignment: .center, spacing: 0) {
             Rectangle()
@@ -16,12 +19,12 @@ struct CocktailListView: View {
                 .clipShape(RoundedRectangle(cornerRadius: 20, style: .circular))
 
             VStack(alignment: .leading, spacing: 0) {
-                Text("Lorem Ipsum sit")
+                Text(cocktail.cocktailName)
                     .font(.A1Bold)
                     .kerning(-0.4)
                     .foregroundStyle(.neutral900)
 
-                Text("White rum, soda, mint, sugar, lime fsaa")
+                Text(cocktail.cocktailIngredients.joined(separator: ", "))
                     .font(.A1)
                     .kerning(-0.4)
                     .foregroundStyle(.neutral500)

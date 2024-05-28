@@ -25,8 +25,8 @@ struct HomeView: View {
                     }
                 ).zIndex(1)
 
-                List(0..<12) { _ in
-                    CocktailListView()
+                List(viewModel.cocktails) { cocktail in
+                    CocktailListView(cocktail: cocktail)
                         .listRowSeparator(.hidden)
                         .listRowInsets(EdgeInsets())
                 }
@@ -38,7 +38,7 @@ struct HomeView: View {
             }
             .overlay(alignment: .bottom) {
                 Button("FEELING LUCKY") {
-                    viewModel.tryNesto()
+
                 }
                 .buttonStyle(
                     RoundedButtonStyle(
