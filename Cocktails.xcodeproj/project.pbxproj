@@ -44,6 +44,7 @@
 		007AA88B2C0654F900CC0372 /* AppDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007AA88A2C0654F900CC0372 /* AppDependency.swift */; };
 		007AA88E2C06559500CC0372 /* CocktailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007AA88D2C06559500CC0372 /* CocktailUseCase.swift */; };
 		007AA8912C0655E500CC0372 /* Cocktail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007AA8902C0655E500CC0372 /* Cocktail.swift */; };
+		007AA8942C06618B00CC0372 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 007AA8932C06618B00CC0372 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				007AA8942C06618B00CC0372 /* Kingfisher in Frameworks */,
 				004CE8642C04AF070081E63C /* FlowStacks in Frameworks */,
 				007AA8892C0654E700CC0372 /* Factory in Frameworks */,
 			);
@@ -211,6 +213,7 @@
 			children = (
 				0071CF052C038BE8003F7340 /* Application */,
 				001A7DBD2C050495002C700A /* Clients */,
+				007AA8952C0661BF00CC0372 /* Components */,
 				004CE85E2C04ACCE0081E63C /* Coordinators */,
 				0071CF002C0338FB003F7340 /* Extensions */,
 				0071CF062C038BFF003F7340 /* Flows */,
@@ -369,6 +372,13 @@
 			path = Local;
 			sourceTree = "<group>";
 		};
+		007AA8952C0661BF00CC0372 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -388,6 +398,7 @@
 			packageProductDependencies = (
 				004CE8632C04AF070081E63C /* FlowStacks */,
 				007AA8882C0654E700CC0372 /* Factory */,
+				007AA8932C06618B00CC0372 /* Kingfisher */,
 			);
 			productName = Cocktails;
 			productReference = 006CBF0D2BFFB7200019D470 /* Cocktails.app */;
@@ -464,6 +475,7 @@
 			packageReferences = (
 				004CE8622C04AF070081E63C /* XCRemoteSwiftPackageReference "FlowStacks" */,
 				007AA8872C0654E700CC0372 /* XCRemoteSwiftPackageReference "Factory" */,
+				007AA8922C06618B00CC0372 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 006CBF0E2BFFB7200019D470 /* Products */;
 			projectDirPath = "";
@@ -886,6 +898,14 @@
 				minimumVersion = 2.3.2;
 			};
 		};
+		007AA8922C06618B00CC0372 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.11.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -898,6 +918,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 007AA8872C0654E700CC0372 /* XCRemoteSwiftPackageReference "Factory" */;
 			productName = Factory;
+		};
+		007AA8932C06618B00CC0372 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 007AA8922C06618B00CC0372 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

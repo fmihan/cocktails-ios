@@ -17,8 +17,7 @@ extension HomeView {
         @ObservationIgnored
         @Injected(\.cocktailUseCase) private var useCase
 
-        var cocktails: [Cocktail] = []
-
+        private(set) var cocktails: [Cocktail] = []
         private var cancellables = Set<AnyCancellable>()
 
         init() {

@@ -25,6 +25,21 @@ struct CCSearchBar: View {
                 .padding(.vertical, 12)
                 .tint(.black)
                 .focused($isActive)
+                
+                if isActive {
+                    Button(action: {
+                        text = ""
+                    }, label: {
+                        ZStack {
+                            Circle()
+                                .fill(.neutral200)
+                                .frame(height: 20)
+                            Image(.searchXmark)
+                        }
+                    })
+                    .padding(.trailing, 12)
+                }
+
             }
             .background()
             .clipShape(RoundedRectangle(cornerRadius: 16, style: .circular))
@@ -50,4 +65,8 @@ struct CCSearchBar: View {
         Text((text.isEmpty && !isActive) ? "Search" : "Type to search")
             .foregroundStyle(isActive ? .neutral500 : .neutral900)
     }
+}
+
+#Preview {
+    CCSearchBar() { }
 }

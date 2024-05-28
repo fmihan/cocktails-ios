@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct CocktailListView: View {
 
@@ -13,9 +14,12 @@ struct CocktailListView: View {
 
     var body: some View {
         HStack(alignment: .center, spacing: 0) {
-            Rectangle()
-                .fill(.black)
+
+            KFImage(cocktail.urlForImage)
+                .resizable()
+                .placeholder { ProgressView().progressViewStyle(.circular) }
                 .frame(width: 74, height: 84)
+                .scaledToFit()
                 .clipShape(RoundedRectangle(cornerRadius: 20, style: .circular))
 
             VStack(alignment: .leading, spacing: 0) {

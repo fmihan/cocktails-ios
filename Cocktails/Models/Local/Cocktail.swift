@@ -13,3 +13,9 @@ struct Cocktail: Identifiable {
     var cocktailName: String
     var cocktailIngredients: [String]
 }
+
+extension Cocktail {
+    var urlForImage: URL? {
+        URL(string: imageUrl)
+    }
+}
