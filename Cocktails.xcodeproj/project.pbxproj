@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		001A7DB02C0500C5002C700A /* Network+APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001A7DAF2C0500C5002C700A /* Network+APIError.swift */; };
+		001A7DB32C0500E2002C700A /* Network+HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001A7DB22C0500E2002C700A /* Network+HTTPMethod.swift */; };
+		001A7DB72C050236002C700A /* NetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001A7DB62C050236002C700A /* NetworkProtocol.swift */; };
+		001A7DBA2C050273002C700A /* Network+Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001A7DB92C050273002C700A /* Network+Endpoint.swift */; };
+		001A7DBC2C0503C0002C700A /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001A7DBB2C0503C0002C700A /* NetworkingService.swift */; };
+		001A7DC02C0504A9002C700A /* CocktailsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001A7DBF2C0504A9002C700A /* CocktailsClient.swift */; };
+		001A7DC32C0506AE002C700A /* CocktailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001A7DC22C0506AE002C700A /* CocktailResponse.swift */; };
 		004CE8612C04ACE40081E63C /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004CE8602C04ACE40081E63C /* MainCoordinator.swift */; };
 		004CE8642C04AF070081E63C /* FlowStacks in Frameworks */ = {isa = PBXBuildFile; productRef = 004CE8632C04AF070081E63C /* FlowStacks */; };
 		006CBF112BFFB7200019D470 /* CocktailsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CBF102BFFB7200019D470 /* CocktailsApp.swift */; };
@@ -32,6 +39,7 @@
 		0071CF152C038F8E003F7340 /* CCSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0071CF142C038F8E003F7340 /* CCSearchBar.swift */; };
 		0071CF182C039308003F7340 /* RoundedButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0071CF172C039308003F7340 /* RoundedButtonStyle.swift */; };
 		0071CF1B2C0399A7003F7340 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0071CF1A2C0399A7003F7340 /* LoadingView.swift */; };
+		007AA8862C06548700CC0372 /* CocktailsListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007AA8852C06548700CC0372 /* CocktailsListResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +60,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		001A7DAF2C0500C5002C700A /* Network+APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Network+APIError.swift"; sourceTree = "<group>"; };
+		001A7DB22C0500E2002C700A /* Network+HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Network+HTTPMethod.swift"; sourceTree = "<group>"; };
+		001A7DB62C050236002C700A /* NetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProtocol.swift; sourceTree = "<group>"; };
+		001A7DB92C050273002C700A /* Network+Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Network+Endpoint.swift"; sourceTree = "<group>"; };
+		001A7DBB2C0503C0002C700A /* NetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
+		001A7DBF2C0504A9002C700A /* CocktailsClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailsClient.swift; sourceTree = "<group>"; };
+		001A7DC22C0506AE002C700A /* CocktailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailResponse.swift; sourceTree = "<group>"; };
 		004CE8602C04ACE40081E63C /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		006CBF0D2BFFB7200019D470 /* Cocktails.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cocktails.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		006CBF102BFFB7200019D470 /* CocktailsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailsApp.swift; sourceTree = "<group>"; };
@@ -80,6 +95,7 @@
 		0071CF142C038F8E003F7340 /* CCSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCSearchBar.swift; sourceTree = "<group>"; };
 		0071CF172C039308003F7340 /* RoundedButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButtonStyle.swift; sourceTree = "<group>"; };
 		0071CF1A2C0399A7003F7340 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		007AA8852C06548700CC0372 /* CocktailsListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailsListResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +124,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		001A7DAB2C04FE5B002C700A /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				001A7DAE2C0500B4002C700A /* Request */,
+				001A7DB62C050236002C700A /* NetworkProtocol.swift */,
+				001A7DBB2C0503C0002C700A /* NetworkingService.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		001A7DAC2C04FFC4002C700A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				001A7DC12C0506A4002C700A /* Network */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		001A7DAE2C0500B4002C700A /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				001A7DAF2C0500C5002C700A /* Network+APIError.swift */,
+				001A7DB22C0500E2002C700A /* Network+HTTPMethod.swift */,
+				001A7DB92C050273002C700A /* Network+Endpoint.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		001A7DBD2C050495002C700A /* Clients */ = {
+			isa = PBXGroup;
+			children = (
+				001A7DBF2C0504A9002C700A /* CocktailsClient.swift */,
+			);
+			path = Clients;
+			sourceTree = "<group>";
+		};
+		001A7DC12C0506A4002C700A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				001A7DC22C0506AE002C700A /* CocktailResponse.swift */,
+				007AA8852C06548700CC0372 /* CocktailsListResponse.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		004CE85E2C04ACCE0081E63C /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,12 +201,15 @@
 			isa = PBXGroup;
 			children = (
 				0071CF052C038BE8003F7340 /* Application */,
+				001A7DBD2C050495002C700A /* Clients */,
 				004CE85E2C04ACCE0081E63C /* Coordinators */,
 				0071CF002C0338FB003F7340 /* Extensions */,
 				0071CF062C038BFF003F7340 /* Flows */,
+				001A7DAC2C04FFC4002C700A /* Models */,
+				001A7DAB2C04FE5B002C700A /* Networking */,
+				006CBF162BFFB7210019D470 /* Preview Content */,
 				0071CEE92C033809003F7340 /* Resources */,
 				0071CF162C0392F8003F7340 /* Styles */,
-				006CBF162BFFB7210019D470 /* Preview Content */,
 			);
 			path = Cocktails;
 			sourceTree = "<group>";
@@ -425,14 +489,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				0071CF042C033918003F7340 /* FontsExtension.swift in Sources */,
+				001A7DBA2C050273002C700A /* Network+Endpoint.swift in Sources */,
 				0071CF092C038C11003F7340 /* HomeView.swift in Sources */,
 				0071CF122C038F41003F7340 /* CocktailListView.swift in Sources */,
 				0071CF182C039308003F7340 /* RoundedButtonStyle.swift in Sources */,
+				001A7DBC2C0503C0002C700A /* NetworkingService.swift in Sources */,
 				0071CF152C038F8E003F7340 /* CCSearchBar.swift in Sources */,
 				0071CF1B2C0399A7003F7340 /* LoadingView.swift in Sources */,
+				001A7DC02C0504A9002C700A /* CocktailsClient.swift in Sources */,
+				001A7DB02C0500C5002C700A /* Network+APIError.swift in Sources */,
+				001A7DC32C0506AE002C700A /* CocktailResponse.swift in Sources */,
 				0071CF0C2C038D8C003F7340 /* HomeViewModel.swift in Sources */,
+				007AA8862C06548700CC0372 /* CocktailsListResponse.swift in Sources */,
+				001A7DB72C050236002C700A /* NetworkProtocol.swift in Sources */,
 				004CE8612C04ACE40081E63C /* MainCoordinator.swift in Sources */,
 				006CBF112BFFB7200019D470 /* CocktailsApp.swift in Sources */,
+				001A7DB32C0500E2002C700A /* Network+HTTPMethod.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

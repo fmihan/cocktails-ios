@@ -38,7 +38,7 @@ struct HomeView: View {
             }
             .overlay(alignment: .bottom) {
                 Button("FEELING LUCKY") {
-                    navigator.push(.details(id: 123))
+                    viewModel.tryNesto()
                 }
                 .buttonStyle(
                     RoundedButtonStyle(

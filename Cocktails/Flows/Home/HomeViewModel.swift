@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 import FlowStacks
 
 extension HomeView {
@@ -13,10 +14,26 @@ extension HomeView {
     @Observable
     class ViewModel {
 
-        func openFilters() {
-            
+        private var cancellables = Set<AnyCancellable>()
+        let network = NetworkingService()
+
+        init() {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                self.tryNesto()
+            }
         }
 
+        func tryNesto() {
+            let cocktailClient = CocktailsClient(network: network)
+            cocktailClient.getCocktailList()
+                .sink(receiveCompletion: {
+                    print($0)
+                }, receiveValue: {
+                    print($0)
+                })
+                .store(in: &cancellables)
+
+        }
     }
 
 
