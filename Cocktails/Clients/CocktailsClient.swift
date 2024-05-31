@@ -13,7 +13,7 @@ protocol CocktailsClientProtocol {
     func getCocktail(id: String) -> AnyPublisher<CocktailsListResponse, Error>
     func getRandomCocktail() -> AnyPublisher<CocktailsListResponse, Error>
 
-    func getCocktailList() -> AnyPublisher<CocktailsListResponse, Error>
+    func getCocktailList(searchText: String) -> AnyPublisher<CocktailsListResponse, Error>
     func getFilteredCocktailList(_ params: [String: String]) -> AnyPublisher<CocktailsListResponse, Error>
 
     func getGlassListFilter() -> AnyPublisher<CocktailGlassFilterListResponse, Error>
@@ -52,12 +52,12 @@ class CocktailsClient: CocktailsClientProtocol {
 
     // MARK:  - List
 
-    func getCocktailList() -> AnyPublisher<CocktailsListResponse, Error> {
+    func getCocktailList(searchText: String = "") -> AnyPublisher<CocktailsListResponse, Error> {
         network.sendRequest(
             endpoint: .init(
                 path: .cocktailList,
                 method: .get,
-                options: [.queryParams(["s": ""])]
+                options: [.queryParams(["s": searchText])]
             )
         )
     }

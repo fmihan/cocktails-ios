@@ -10,7 +10,7 @@ import SwiftUI
 struct CCSearchBar: View {
 
     @FocusState private var isActive: Bool
-    @State var text = ""
+    @Binding var text: String
 
     var filtersTapped: (() -> Void)
 
@@ -66,11 +66,11 @@ struct CCSearchBar: View {
         if text.isEmpty && !isActive {
             return Text("search.placeholder.inactive").foregroundStyle(.neutral900)
         } else {
-            return Text("search.placeholder.active").foregroundStyle(.neutral900)
+            return Text("search.placeholder.active").foregroundStyle(.neutral500)
         }
     }
 }
 
 #Preview {
-    CCSearchBar() { }
+    CCSearchBar(text: .constant("")) { }
 }

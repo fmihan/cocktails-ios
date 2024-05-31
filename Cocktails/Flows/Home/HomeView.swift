@@ -19,6 +19,7 @@ struct HomeView: View {
                 .ignoresSafeArea(.container, edges: .top)
             VStack(spacing: 0) {
                 CCSearchBar(
+                    text: $viewModel.searchText,
                     filtersTapped: {
                         navigator.push(.filters)
                     }

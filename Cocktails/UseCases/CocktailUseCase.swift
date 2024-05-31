@@ -13,7 +13,7 @@ protocol CocktailUseCaseProtocol {
     func getRandomCocktail() -> AnyPublisher<String, Error>
     func getCocktailDetails(for id: String) -> AnyPublisher<[CocktailDetailsViewType], Error>
 
-    func getCocktailList() -> AnyPublisher<[Cocktail], Error>
+    func getCocktailList(searchText: String) -> AnyPublisher<[Cocktail], Error>
     func filterCocktails(_ filter: [FilterCategory: CocktailFilter]) -> AnyPublisher<[Cocktail], Error>
 
     func getFilters() -> AnyPublisher<[FilterSection], Error>
@@ -63,8 +63,8 @@ class CocktailUseCase: CocktailUseCaseProtocol {
 
     // MARK: - Lists
 
-    func getCocktailList() -> AnyPublisher<[Cocktail], Error> {
-        cocktailClient.getCocktailList()
+    func getCocktailList(searchText: String = "") -> AnyPublisher<[Cocktail], Error> {
+        cocktailClient.getCocktailList(searchText: searchText)
             .map { response in
                 guard let list = response.drinks else { return [] }
                 return list.map { Cocktail(cocktailResponse: $0) }
