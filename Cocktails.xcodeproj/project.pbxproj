@@ -241,7 +241,6 @@
 		001A7DAB2C04FE5B002C700A /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				00C67D682C0A00C500D3555A /* Mocking */,
 				001A7DAE2C0500B4002C700A /* Request */,
 				001A7DB62C050236002C700A /* NetworkProtocol.swift */,
 				001A7DBB2C0503C0002C700A /* NetworkingService.swift */,
@@ -294,8 +293,8 @@
 		004CE85E2C04ACCE0081E63C /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
-				004CE8602C04ACE40081E63C /* MainCoordinator.swift */,
 				00C67D922C0A1B0300D3555A /* AppScreen.swift */,
+				004CE8602C04ACE40081E63C /* MainCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -582,13 +581,6 @@
 				00C67D592C09F10C00D3555A /* UINavigationControllerExtension.swift */,
 			);
 			path = UIKit;
-			sourceTree = "<group>";
-		};
-		00C67D682C0A00C500D3555A /* Mocking */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Mocking;
 			sourceTree = "<group>";
 		};
 		00C67D692C0A021300D3555A /* Mock */ = {
