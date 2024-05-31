@@ -10,9 +10,11 @@ import Foundation
 struct EndPoint {
 
     enum Path: String {
-        case filter = "list.php"
+        case filter = "filter.php"
+        case filterList = "list.php"
         case cocktailList = "search.php"
-        case cocktailDetails = "details.php"
+        case randomCocktail = "random.php"
+        case cocktailDetails = "lookup.php"
     }
 
     enum Options: Equatable {

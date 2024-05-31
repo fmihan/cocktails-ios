@@ -10,7 +10,8 @@ import FlowStacks
 
 enum AppScreen: Hashable {
     case filters
-    case details(id: Int)
+    case details(id: String)
+    case filterResults(for: [FilterCategory: CocktailFilter])
 }
 
 struct AppCoordinator: View {
@@ -23,10 +24,11 @@ struct AppCoordinator: View {
                 .flowDestination(for: AppScreen.self) { screen in
                     switch screen {
                     case .filters:
-                        Text("Filters TO DO")
-                            .navigationTitle("Filters")
+                       FiltersView()
                     case .details(let id):
-                        Text("Hello, \(id)")
+                        DetailsView(cocktailId: id)
+                    case .filterResults(for: let filters):
+                        FilterResultsView(filters: filters)
                     }
                 }
 

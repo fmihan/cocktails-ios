@@ -11,6 +11,7 @@ import Kingfisher
 struct CocktailListView: View {
 
     let cocktail: Cocktail
+    let onTap: (() -> Void)
 
     var body: some View {
         HStack(alignment: .center, spacing: 0) {
@@ -28,11 +29,14 @@ struct CocktailListView: View {
                     .kerning(-0.4)
                     .foregroundStyle(.neutral900)
 
-                Text(cocktail.cocktailIngredients.joined(separator: ", "))
-                    .font(.A1)
-                    .kerning(-0.4)
-                    .foregroundStyle(.neutral500)
-                    .lineLimit(1)
+                if !cocktail.cocktailIngredients.isEmpty {
+                    Text(cocktail.cocktailIngredients.joined(separator: ", "))
+                        .font(.A1)
+                        .kerning(-0.4)
+                        .foregroundStyle(.neutral500)
+                        .lineLimit(1)
+                }
+
             }
             .padding(.leading, 24)
 
@@ -46,5 +50,11 @@ struct CocktailListView: View {
                 .padding(.horizontal, 20)
         })
         .background(.blue100)
+        .onTapGesture {
+            onTap()
+        }
+        .contentShape(Rectangle())
+        .listRowSeparator(.hidden)
+        .listRowInsets(EdgeInsets())
     }
 }

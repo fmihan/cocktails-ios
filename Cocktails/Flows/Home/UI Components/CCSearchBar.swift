@@ -29,6 +29,7 @@ struct CCSearchBar: View {
                 if isActive {
                     Button(action: {
                         text = ""
+                        isActive = false
                     }, label: {
                         ZStack {
                             Circle()
@@ -62,8 +63,11 @@ struct CCSearchBar: View {
     }
 
     var textFieldPrompt: Text {
-        Text((text.isEmpty && !isActive) ? "Search" : "Type to search")
-            .foregroundStyle(isActive ? .neutral500 : .neutral900)
+        if text.isEmpty && !isActive {
+            return Text("search.placeholder.inactive").foregroundStyle(.neutral900)
+        } else {
+            return Text("search.placeholder.active").foregroundStyle(.neutral900)
+        }
     }
 }
 

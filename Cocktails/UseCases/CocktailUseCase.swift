@@ -9,7 +9,17 @@ import Combine
 import Foundation
 
 protocol CocktailUseCaseProtocol {
+
+    func getRandomCocktail() -> AnyPublisher<String, Error>
+    func getCocktailDetails(for id: String) -> AnyPublisher<[CocktailDetailsViewType], Error>
+
     func getCocktailList() -> AnyPublisher<[Cocktail], Error>
+    func filterCocktails(_ filter: [FilterCategory: CocktailFilter]) -> AnyPublisher<[Cocktail], Error>
+
+    func getFilters() -> AnyPublisher<[FilterSection], Error>
+    func getGlassFilters() -> AnyPublisher<[CocktailFilter], Error>
+    func getAlcoholFilters() -> AnyPublisher<[CocktailFilter], Error>
+    func getCategoryFilters() -> AnyPublisher<[CocktailFilter], Error>
 }
 
 class CocktailUseCase: CocktailUseCaseProtocol {
@@ -20,39 +30,102 @@ class CocktailUseCase: CocktailUseCaseProtocol {
         self.cocktailClient = cocktailClient
     }
 
-    func getCocktailList() -> AnyPublisher<[Cocktail], Error> {
-        cocktailClient.getCocktailList()
-            .map { response in
-                guard let list = response.drinks else { return [] }
-                return list.map { cocktail in
-                    
-                    let ingredients = [
-                        cocktail.strIngredient1,
-                        cocktail.strIngredient2,
-                        cocktail.strIngredient3,
-                        cocktail.strIngredient4,
-                        cocktail.strIngredient5,
-                        cocktail.strIngredient6,
-                        cocktail.strIngredient7,
-                        cocktail.strIngredient8,
-                        cocktail.strIngredient9,
-                        cocktail.strIngredient10,
-                        cocktail.strIngredient11,
-                        cocktail.strIngredient12,
-                        cocktail.strIngredient13,
-                        cocktail.strIngredient14,
-                        cocktail.strIngredient15
-                    ].compactMap { $0 }
+    // MARK: - Details
 
-                    return Cocktail(
-                        id: cocktail.idDrink ?? "",
-                        imageUrl: cocktail.strDrinkThumb ?? "",
-                        cocktailName: cocktail.strDrink ?? "",
-                        cocktailIngredients: ingredients
-                    )
+    func getRandomCocktail() -> AnyPublisher<String, Error> {
+        cocktailClient.getRandomCocktail()
+            .tryMap { response -> CocktailResponse in
+                guard let first = response.drinks?.first else {
+                    throw URLError(.badServerResponse)
                 }
+                return first
+            }
+            .map { cocktailResponse in
+                return cocktailResponse.idDrink ?? ""
             }
             .eraseToAnyPublisher()
     }
 
+    func getCocktailDetails(for id: String) -> AnyPublisher<[CocktailDetailsViewType], Error> {
+        cocktailClient.getCocktail(id: id)
+            .tryMap { response -> CocktailResponse in
+                guard let first = response.drinks?.first else {
+                    throw URLError(.badServerResponse)
+                }
+                return first
+            }
+            .map { cocktailResponse in
+                return CocktailDetails(cocktailResponse: cocktailResponse).createSections()
+            }
+            .eraseToAnyPublisher()
+    }
+
+
+    // MARK: - Lists
+
+    func getCocktailList() -> AnyPublisher<[Cocktail], Error> {
+        cocktailClient.getCocktailList()
+            .map { response in
+                guard let list = response.drinks else { return [] }
+                return list.map { Cocktail(cocktailResponse: $0) }
+            }
+            .eraseToAnyPublisher()
+    }
+
+    func filterCocktails(_ filter: [FilterCategory: CocktailFilter]) -> AnyPublisher<[Cocktail], Error> {
+        let params = Dictionary(uniqueKeysWithValues: filter.map { key, value in (
+            key.queryKey, value.name)
+        })
+
+        return cocktailClient.getFilteredCocktailList(params)
+            .map { response in
+                guard let list = response.drinks else { return [] }
+                return list.map { Cocktail(cocktailResponse: $0) }
+            }
+            .eraseToAnyPublisher()
+    }
+
+
+    // MARK: - Filters
+
+    func getFilters() -> AnyPublisher<[FilterSection], Error> {
+        Publishers.Zip3(getGlassFilters(), getAlcoholFilters(), getCategoryFilters())
+            .map { glassFilters, alcoholFilters, categoryFilters in
+                return [
+                    FilterSection(type: .category, items: categoryFilters),
+                    FilterSection(type: .glass, items: glassFilters),
+                    FilterSection(type: .alcoholic, items: alcoholFilters)
+                ]
+            }
+            .catch { error -> AnyPublisher<[FilterSection], Error> in
+                print("Error encountered: \(error)")
+                return Fail(error: error).eraseToAnyPublisher()
+            }
+            .eraseToAnyPublisher()
+    }
+
+    func getGlassFilters() -> AnyPublisher<[CocktailFilter], Error> {
+        cocktailClient.getGlassListFilter()
+            .map { response in
+                response.drinks.map { CocktailFilter(name: $0.strGlass) }
+            }
+            .eraseToAnyPublisher()
+    }
+
+    func getAlcoholFilters() -> AnyPublisher<[CocktailFilter], Error> {
+        cocktailClient.getAlcoholicListFilter()
+            .map { response in
+                response.drinks.map { CocktailFilter(name: $0.strAlcoholic) }
+            }
+            .eraseToAnyPublisher()
+    }
+
+
+    func getCategoryFilters() -> AnyPublisher<[CocktailFilter], Error> {
+        cocktailClient.getCategoryListFilter()
+            .map { response in
+                response.drinks.map { CocktailFilter(name: $0.strCategory) }
+            }
+            .eraseToAnyPublisher()
+    }
 }
