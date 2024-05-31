@@ -20,12 +20,12 @@ struct CCSearchBar: View {
                 Image(.searchMagnifyingglass)
                     .padding(.leading, 10)
                 TextField("",text: $text, prompt: textFieldPrompt)
-                .font(.A1)
-                .kerning(-0.5)
-                .padding(.vertical, 12)
-                .tint(.black)
-                .focused($isActive)
-                
+                    .font(.A1)
+                    .kerning(-0.5)
+                    .padding(.vertical, 12)
+                    .tint(.black)
+                    .focused($isActive)
+
                 if isActive {
                     Button(action: {
                         text = ""

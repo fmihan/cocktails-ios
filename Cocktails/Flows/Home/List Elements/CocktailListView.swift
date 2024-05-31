@@ -65,7 +65,8 @@ struct CocktailListView: View {
         }
 
         if let range = cocktail.cocktailName.range(of: searchText, options: .caseInsensitive) {
-            let highlighted = cocktail.cocktailName.replacingOccurrences(of: searchText.lowercased(), with: "**\(searchText.lowercased())**", options: .caseInsensitive, range: range)
+            let searchSubstr = String(cocktail.cocktailName[range])
+            let highlighted = cocktail.cocktailName.replacingCharacters(in: range, with: "**\(searchSubstr)**")
             return LocalizedStringKey(highlighted)
         } else {
             return LocalizedStringKey(cocktail.cocktailName)
