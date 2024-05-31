@@ -17,16 +17,19 @@ extension FiltersView {
         @ObservationIgnored
         @Injected(\.cocktailUseCase) var useCase
 
+        @ObservationIgnored
+        @Published var sectionsNonTracked: [FilterSection] = []
+
         private var cancellables = Set<AnyCancellable>()
 
-        var sections: [FilterSection] = []
+        var sections: [FilterSection] = [] { didSet { sectionsNonTracked = sections } }
         var selectedFilters: [FilterCategory: CocktailFilter] = [:]
 
         init() {
             loadFilters()
         }
 
-        private func loadFilters() {
+        func loadFilters() {
             useCase.getFilters()
                 .sink(receiveCompletion: { status in
                     switch status {

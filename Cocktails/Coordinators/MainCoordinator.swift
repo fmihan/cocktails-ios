@@ -8,13 +8,7 @@
 import SwiftUI
 import FlowStacks
 
-enum AppScreen: Hashable {
-    case filters
-    case details(id: String)
-    case filterResults(for: [FilterCategory: CocktailFilter])
-}
-
-struct AppCoordinator: View {
+struct MainCoordinator: View {
 
     @State var routes: [Route<AppScreen>] = []
 

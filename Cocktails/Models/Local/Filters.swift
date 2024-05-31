@@ -34,17 +34,6 @@ enum FilterCategory: Hashable {
             return "a"
         }
     }
-
-    var image: ImageResource {
-        switch self {
-        case .glass:
-            return .glass
-        case .category:
-            return .category
-        case .alcoholic:
-            return .alcoholic
-        }
-    }
 }
 
 struct FilterSection: Identifiable {

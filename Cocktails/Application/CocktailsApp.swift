@@ -16,7 +16,7 @@ struct CocktailsApp: App {
 
     var body: some Scene {
         WindowGroup {
-            AppCoordinator()
+            MainCoordinator()
         }
     }
 
@@ -36,14 +36,4 @@ struct CocktailsApp: App {
         UINavigationBar.appearance().standardAppearance = appearance
         UINavigationBar.appearance().scrollEdgeAppearance = appearance
     }
-}
-
-
-extension UINavigationController {
-
-  open override func viewWillLayoutSubviews() {
-    super.viewWillLayoutSubviews()
-    navigationBar.topItem?.backButtonDisplayMode = .minimal
-  }
-
 }

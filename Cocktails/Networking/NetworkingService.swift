@@ -14,7 +14,6 @@ class NetworkingService: NetworkProtocol {
         guard let urlRequest = endpoint.urlRequest else {
             precondition(false, "Failed URLRequest")
         }
-        print(urlRequest.url?.absoluteString)
         return URLSession.shared.dataTaskPublisher(for: urlRequest)
             .subscribe(on: DispatchQueue.global(qos: .background))
             .tryMap { data, response -> Data in
