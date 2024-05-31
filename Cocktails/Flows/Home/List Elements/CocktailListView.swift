@@ -10,6 +10,7 @@ import Kingfisher
 
 struct CocktailListView: View {
 
+    var searchText: String? = nil
     let cocktail: Cocktail
     let onTap: (() -> Void)
 
@@ -24,8 +25,8 @@ struct CocktailListView: View {
                 .clipShape(RoundedRectangle(cornerRadius: 20, style: .circular))
 
             VStack(alignment: .leading, spacing: 0) {
-                Text(cocktail.cocktailName)
-                    .font(.A1Bold)
+                Text(highlightedText())
+                    .font(.A1)
                     .kerning(-0.4)
                     .foregroundStyle(.neutral900)
 
@@ -56,5 +57,18 @@ struct CocktailListView: View {
         .contentShape(Rectangle())
         .listRowSeparator(.hidden)
         .listRowInsets(EdgeInsets())
+    }
+
+    func highlightedText() -> LocalizedStringKey {
+        guard let searchText, !searchText.isEmpty else {
+            return "**\(cocktail.cocktailName)**"
+        }
+
+        if let range = cocktail.cocktailName.range(of: searchText, options: .caseInsensitive) {
+            let highlighted = cocktail.cocktailName.replacingOccurrences(of: searchText.lowercased(), with: "**\(searchText.lowercased())**", options: .caseInsensitive, range: range)
+            return LocalizedStringKey(highlighted)
+        } else {
+            return LocalizedStringKey(cocktail.cocktailName)
+        }
     }
 }

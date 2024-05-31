@@ -27,6 +27,7 @@ struct HomeView: View {
 
                 List(viewModel.cocktails) { cocktail in
                     CocktailListView(
+                        searchText: viewModel.searchText,
                         cocktail: cocktail,
                         onTap: { navigator.push(.details(id: cocktail.id)) }
                     )

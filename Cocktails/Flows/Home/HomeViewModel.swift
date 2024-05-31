@@ -10,7 +10,7 @@ import Combine
 import Factory
 
 extension HomeView {
-    
+
     @Observable
     class ViewModel: ObservableObject {
 
@@ -19,8 +19,6 @@ extension HomeView {
 
         private(set) var cocktails: [Cocktail] = []
         private var cancellables = Set<AnyCancellable>()
-
-
         private var searchSubject = PassthroughSubject<String, Never>()
 
         var searchText: String = "" {

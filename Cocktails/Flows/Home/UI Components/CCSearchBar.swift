@@ -45,7 +45,7 @@ struct CCSearchBar: View {
             .background()
             .clipShape(RoundedRectangle(cornerRadius: 16, style: .circular))
 
-            if !isActive {
+            if !isActive && text.isEmpty {
                 Button(action: filtersTapped) {
                     Image(.filter)
                 }
